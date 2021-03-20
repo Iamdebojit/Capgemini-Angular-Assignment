@@ -1,0 +1,27 @@
+<form style="text-align: left; margin-left: 50px; ">
+    <label for="name">Trainee Name</label><br>
+    <input type="text" name="name" id="trainee-name" [(ngModel)]="name">
+    <br><br>
+    <label for="course">Courses</label><br>
+    <select [(ngModel)]="course" name="course" id="course-date">
+        <option value="MEAN">MEAN</option>
+        <option value="MERN">MERN</option>
+        <option value="Vue">Vue</option>
+    </select>
+    <br><br>
+    <label for="JoiningDate">Joining Date</label><br>
+    <input type="date" name="JoiningDate" [(ngModel)]="joiningDate" id="joining-date"> 
+    <br><br>
+    <label for="CourseDate">Course Date</label><br>
+    <input type="date" name="CourseDate" [(ngModel)]="courseDate" id="course-date">
+    <br><br>
+    <input type="Submit" value="Save" id="save" (click)="enrollCourse()" > 
+    <br><br><br>
+
+    <div *ngIf="isTimeError" id="time-error">Time Error</div>
+    <div *ngIf="isNameError" id="name-error">Name Error</div>
+    <div *ngIf="isCourseError" id="course-error">Course Error</div>
+    <div *ngIf="isJoiningTimeError" id="joining-time-error">Joining Time Error</div>
+    <div *ngIf="isCourseTimeError" id="course-time-error">Course Time Error</div>
+</form>
+ 

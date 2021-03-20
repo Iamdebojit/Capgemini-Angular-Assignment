@@ -1,0 +1,14 @@
+<table border=1 align="center">
+    <tr >
+        <th>Trainee Name</th>
+        <th>Course Name</th>
+        <th>Joining Date</th>
+        <th>Course Date</th>
+    </tr>
+    <tr *ngFor="let d of data.courseList">
+        <th>{{d.Name}}</th>
+        <th>{{d.Course}}</th>
+        <th>{{d.JoiningDate | date:'yyyy-MM-dd'}}</th>
+        <th>{{d.CourseDate  | date:'yyyy-MM-dd'}}</th>
+    </tr>
+</table>
